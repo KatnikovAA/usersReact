@@ -3,8 +3,8 @@ import userLogoImg from "../../img/userLogo.png"
 import emailImg from "../../img/email.png"
 import phoneImg from "../../img/phone.png"
 import websiteImg from "../../img/website.png" 
+
 export const Content = ({arrUsers}) => {
-    console.log(arrUsers)
     return(
         <div className="content">
             <div className="contentTopBlock">

@@ -19,9 +19,7 @@ export const Main = () => {
     useEffect(()=>{
         timerCall();
     },[])
-
-
-    
+   
     return(
         <div>
             <div className="header">
@@ -31,11 +29,9 @@ export const Main = () => {
                 {
                    usersArr &&
                    usersArr.map((val)=>{
-                    return <Content arrUsers={val} key={val.id}></Content>
-                }) 
-                
+                        return <Content arrUsers={val} key={val.id}></Content>
+                    })
                 }
-
             </div>
         </div>
     )
