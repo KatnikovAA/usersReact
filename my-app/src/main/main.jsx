@@ -7,13 +7,21 @@ export const Main = () => {
 
     const[usersArr,setUsersArr] = useState(null)
 
-    useEffect(()=>{
+    const timerCall = () => {
+        setInterval(callApi,5000)
+    }
+
+    const callApi = () => {
         apiUsers()
         .then(response =>
             setUsersArr(response))
+    }
+    useEffect(()=>{
+        timerCall();
     },[])
 
 
+    
     return(
         <div>
             <div className="header">
@@ -21,12 +29,10 @@ export const Main = () => {
             </div>
             <div className="contentList">
                 {
-                    
-                   usersArr ?
+                   usersArr &&
                    usersArr.map((val)=>{
-                    console.log(val)
                     return <Content arrUsers={val} key={val.id}></Content>
-                })  : <></>
+                }) 
                 
                 }
 

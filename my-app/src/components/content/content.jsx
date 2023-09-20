@@ -3,8 +3,8 @@ import userLogoImg from "../../img/userLogo.png"
 import emailImg from "../../img/email.png"
 import phoneImg from "../../img/phone.png"
 import websiteImg from "../../img/website.png" 
-export const Content = (arrUsers) => {
-    console.log(arrUsers.obj)
+export const Content = ({arrUsers}) => {
+    console.log(arrUsers)
     return(
         <div className="content">
             <div className="contentTopBlock">
@@ -13,10 +13,10 @@ export const Content = (arrUsers) => {
                 </div>
                 <div>
                     <div className="userName">
-                        {arrUsers.arrUsers.name}
+                        {arrUsers.name}
                     </div>
                     <div className="userUsername">
-                        {arrUsers.arrUsers.username}
+                        {arrUsers.username}
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@ export const Content = (arrUsers) => {
                     email:
                 </div>
                 <div className="userEmail">
-                    {arrUsers.arrUsers.email}
+                    {arrUsers.email}
                 </div>
             </div>
             <div className="userWebsiteBlock">
@@ -35,7 +35,7 @@ export const Content = (arrUsers) => {
                     website:
                 </div>
                 <div className="userWebsite">
-                    {arrUsers.arrUsers.website}
+                    {arrUsers.website}
                 </div>
             </div>
             <div className="userPhoneBlock">
@@ -44,7 +44,7 @@ export const Content = (arrUsers) => {
                     phone:
                 </div>
                 <div className="userPhone">
-                    {arrUsers.arrUsers.phone}
+                    {arrUsers.phone}
                 </div>
             </div>
         </div>
